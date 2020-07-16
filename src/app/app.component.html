@@ -5,10 +5,10 @@
 
 <body class="container">
 
-  <h3 class="bg-primary text-white p-3 my-3">{{getName()}}'s To Do List</h3>
+  <h3 class="bg-primary text-white p-3 my-3"> {{getName()}}'s To Do List </h3>
   <div>
-    <input type="text" class="form-control" />
-    <button class="btn btn-success btn-block btn-lg my-3">Add</button>
+    <input type="text" class="form-control" #newItem />
+    <button class="btn btn-success btn-block btn-lg my-3" (click)="addItem(newItem.value)"> Add </button>
   </div>
   <table class="table table-bordered table-hover my-3">
     <thead class="thead-dark">

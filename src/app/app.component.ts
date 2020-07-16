@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Model } from './model'
+import { Model, ToDoItem } from './model'
 
 @Component({
   selector: 'app-root',
@@ -13,9 +13,16 @@ export class AppComponent {
   getName() {
     return this.UModel.user;
   }
-  
+
   getToDoItems() {
-    return this.UModel.items;
+    // return this.UModel.items;
+    return this.UModel.items.filter(function (item) {
+      return !item.done;
+    });
+  }
+
+  addItem(s: String) {
+    this.UModel.items.push(new ToDoItem(s, false));
   }
 }
 

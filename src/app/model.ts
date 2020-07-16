@@ -7,15 +7,11 @@ export class Model {
     constructor() {
         this.user = "Shubham";
         this.items = [
-            new ToDoItem("Learn Bootstrap", true),
+            new ToDoItem("Learn Bootstrap", false),
             new ToDoItem("Attend Another Lecture", false),
             new ToDoItem("Have A Lunch", false),
             new ToDoItem("Sleep", false),
         ]
-    }
-
-    addItems(s: String) {
-        this.items.push(new ToDoItem(s, false));
     }
 }
 
